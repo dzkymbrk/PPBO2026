@@ -1,4 +1,5 @@
 <?php
 // index.php
-echo "Halo Dunia! Belajar Git di VS Code.";
+$nama = "Dzaky Mubarak"; //tulis nama kalian masing-masing
+echo "Halo, $nama! Belajar Git di VS Code itu mudah.";
 ?>
