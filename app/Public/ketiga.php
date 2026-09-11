@@ -1,9 +1,9 @@
 <?php
 
-require_once '../shapes/Lingkaran.php';
-require_once '../shapes/Bola.php';
-require_once '../shapes/Tabung.php';
-require_once '../shapes/Kerucut.php';
+require_once '../Shapes/Lingkaran.php';
+require_once '../Shapes/Bola.php';
+require_once '../Shapes/Tabung.php';
+require_once '../Shapes/Kerucut.php';
 
 echo "--- LINGKARAN ---\n";
 $objek_lingkaran = new Lingkaran(4); 
