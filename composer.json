@@ -1,0 +1,13 @@
+{
+    "name": "dzkymbrk/ppbo2026",
+    "description": "Merupakan package untuk latihan pemrograman beriorentasi objek",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+     "autoload": {
+        "psr-4":{
+            "App\\":"app"
+        }
+    }
+}
+
