@@ -1,9 +1,8 @@
 <?php
-
-
+namespace App\Site\Admin;
 class HomePage
 {
-    function tampil() : void {
+    public function tampil()  {
         echo "Halaman depan admin";
     }
 }
