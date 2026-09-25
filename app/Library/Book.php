@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Library;
 class Book
 {
     public string $title;

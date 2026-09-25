@@ -1,4 +1,6 @@
 <?php
+
+namespace App\Library;
 class Author
 {
     public string $name;

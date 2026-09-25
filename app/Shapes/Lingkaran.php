@@ -1,5 +1,6 @@
 <?php
 
+namespace App\Shapes;
 class Lingkaran
 {
     public float $r;

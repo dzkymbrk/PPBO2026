@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Shapes;
+
 require_once '../Shapes/Lingkaran.php';
 require_once '../Shapes/Bola.php';
 require_once '../Shapes/Tabung.php';

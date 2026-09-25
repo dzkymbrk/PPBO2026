@@ -1,13 +1,14 @@
 <?php
 
-require_once 'Author.php';
-require_once 'Book.php';
-require_once 'Publisher.php';
-require_once 'Lingkaran.php';
-require_once 'Tabung.php';
-require_once 'Kerucut.php';
-require_once 'Bola.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
+use App\Library\Author;
+use App\Library\Book;
+use App\Library\Publisher;
+use App\Shapes\Lingkaran;
+use App\Shapes\Tabung;
+use App\Shapes\Kerucut;
+use App\Shapes\Bola;
 
 $author = new Author();
 $author->name = "jek";
