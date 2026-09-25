@@ -6,7 +6,6 @@ use App\Akademik\Pegawai;
 
 class Dosen extends Pegawai
 {
-    // Property $nidn diatur menjadi private
     private string $nidn;
     public int $jumlah_sks;
 
@@ -25,11 +24,6 @@ class Dosen extends Pegawai
     public function mengajar(): void
     {
         echo $this->nama . " sedang mengajar perkuliahan.\n";
-    }
-
-    public function hitungTunjanganKinerja(): int
-    {
-        return $this->jumlah_sks * 150000;
     }
 
     public function getNidn(): string
