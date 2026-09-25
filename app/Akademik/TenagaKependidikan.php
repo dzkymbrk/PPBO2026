@@ -33,4 +33,9 @@ class TenagaKependidikan extends Pegawai
     {
         echo "{$this->nama} sedang mengajukan cuti selama {$jumlahHari} hari\n";
     }
+
+    public function getGajiPokok(): int
+    {
+        return $this->gaji_pokok;
+    }
 }
