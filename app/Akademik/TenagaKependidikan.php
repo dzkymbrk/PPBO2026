@@ -6,7 +6,7 @@ use App\Akademik\Pegawai;
 use App\Akademik\PenilaianKinerja;
 
 
-class TenagaKependidikan extends Pegawai implements PenilaianKinerja
+class TenagaKependidikan extends Pegawai implements PenilaianKinerja, DapatCuti
 {
     public int $gaji_pokok;
 
@@ -20,7 +20,7 @@ class TenagaKependidikan extends Pegawai implements PenilaianKinerja
 
     public function bekerja(): void
     {
-        echo $this->nama . " sedang mengurus administrasi akademik.<br>";
+        echo $this->nama . " sedang mengurus administrasi akademik.\n";
     }
 
 
@@ -28,6 +28,12 @@ class TenagaKependidikan extends Pegawai implements PenilaianKinerja
     public function hitungTunjanganKinerja(): int
     {
         return $this->gaji_pokok * 0.2;
+    }
+
+
+    public function Ajukancuti(int $jumlah_hari): void
+    {
+        echo $this->nama . " sedang mengajukan cuti untuk $jumlah_hari hari.\n";
     }
 
 
