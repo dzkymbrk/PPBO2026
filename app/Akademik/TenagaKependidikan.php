@@ -1,12 +1,15 @@
 <?php
-
 namespace App\Akademik;
 
-use App\Akademik\Pegawai;
 
-class TenagaKependidikan extends Pegawai
+use App\Akademik\Pegawai;
+use App\Akademik\PenilaianKinerja;
+
+
+class TenagaKependidikan extends Pegawai implements PenilaianKinerja
 {
     public int $gaji_pokok;
+
 
     public function __construct(int $nip, string $nama, string $no_hp, string $alamat, int $gaji_pokok)
     {
@@ -14,28 +17,22 @@ class TenagaKependidikan extends Pegawai
         $this->gaji_pokok = $gaji_pokok;
     }
 
+
     public function bekerja(): void
     {
-        echo $this->nama . " sedang mengurus administrasi akademik.\n";
+        echo $this->nama . " sedang mengurus administrasi akademik.<br>";
     }
 
+
+    // Implementasi dari interface PenilaianKinerja
     public function hitungTunjanganKinerja(): int
     {
         return $this->gaji_pokok * 0.2;
     }
 
+
     public function cuti(): void
     {
-        echo $this->nama . " sedang mengambil cuti.\n";
-    }
-
-    public function ajukanCuti(int $jumlahHari): void
-    {
-        echo "{$this->nama} sedang mengajukan cuti selama {$jumlahHari} hari\n";
-    }
-
-    public function getGajiPokok(): int
-    {
-        return $this->gaji_pokok;
+        echo $this->nama . " sedang mengambil cuti.<br>";
     }
 }

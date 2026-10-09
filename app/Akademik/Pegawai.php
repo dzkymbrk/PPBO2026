@@ -2,6 +2,7 @@
 
 namespace App\Akademik;
 
+
 abstract class Pegawai
 {
     public int $nip;
