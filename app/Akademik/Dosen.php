@@ -1,18 +1,14 @@
 <?php
 
-
 namespace App\Akademik;
-
 
 use App\Akademik\Pegawai;
 use App\Akademik\PenilaianKinerja;
 
-
 class Dosen extends Pegawai implements PenilaianKinerja
 {
-    public int $nidn;
-    public int $jumlah_sks;
-
+    private string $nidn;
+    private int $jumlah_sks;
 
     public function __construct(int $nip, string $nama, string $no_hp, string $alamat, string $nidn)
     {
@@ -21,18 +17,36 @@ class Dosen extends Pegawai implements PenilaianKinerja
         $this->jumlah_sks = 24;
     }
 
+    public function getNidn(): string
+    {
+        return $this->nidn;
+    }
 
-    // Implementasi dari abstract method bekerja()
+    public function __get(string $name)
+    {
+        if ($name === 'jumlah_sks') {
+            return $this->jumlah_sks;
+        }
+        if ($name === 'nidn') {
+            return $this->nidn;
+        }
+        return null;
+    }
+
+    public function __set(string $name, $value): void
+    {
+        if ($name === 'jumlah_sks') {
+            $this->jumlah_sks = (int)$value;
+        }
+    }
+
     public function bekerja(): void
     {
         echo $this->nama . " sedang mengajar dan membimbing mahasiswa.<br>";
     }
 
-
-    // Implementasi dari interface PenilaianKinerja
     public function hitungTunjanganKinerja(): int
     {
-        // Contoh logika: tunjangan berdasarkan SKS mengajar
         return $this->jumlah_sks * 150000;
     }
 }
