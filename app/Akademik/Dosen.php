@@ -10,8 +10,8 @@ use App\Akademik\PenilaianKinerja;
 
 class Dosen extends Pegawai implements PenilaianKinerja
 {
-    private int $nidn;
-    private int $jumlah_sks;
+    public int $nidn;
+    public int $jumlah_sks;
 
 
     public function __construct(int $nip, string $nama, string $no_hp, string $alamat, string $nidn)
