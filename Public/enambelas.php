@@ -26,3 +26,7 @@ if ($pegawaiRepo->simpanPegawai($tendik1)) {
 } else {
     echo "Gagal menyimpan data {$tendik1->nama}. Cek log error.\n";
 }
+$listDosen = $pegawaiRepo->ambilSemuaDosen();
+foreach ($listDosen as $dsn) {
+echo "Dosen dengan nama {$dsn->nama} lulus sertifikasi \n";
+}
